@@ -9,7 +9,7 @@ import json
 
 def pokemon_list(request):
 
-    endpoint = "https://pokeapi.co/api/v2/pokemon/?limit=20"
+    endpoint = "https://pokeapi.co/api/v2/pokemon/?limit=30"
     response = create_request(endpoint)
 
     titulo = "Lista de Pokemon"
@@ -41,7 +41,7 @@ def pokemon_list_type(request, pokemon_type):
     response_pokemon = response.get("pokemon", None)
     pokemon_list = []
 
-    pokemon_limit = 20
+    pokemon_limit = 30
     for dict_pokemon in response_pokemon:
         if pokemon_limit == 0:
             break
